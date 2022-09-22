@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Status</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2 th:text="|Welcome ${firstName} ${lastName}|">
+      Registration Message
+  </h2>
+  <hr>
+    <h3 th:if="${rememberMe == 'on'}"> You will be remembered!</h3>
+</body>
+</html>

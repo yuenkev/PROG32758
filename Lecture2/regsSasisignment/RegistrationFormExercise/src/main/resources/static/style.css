@@ -1,0 +1,10 @@
+body {
+    background-color: lightblue;
+    text-align: center;
+    font-size: 25px;
+    font-family: monospace;
+}
+
+hr {
+    border: 2px solid black;
+}
