@@ -1,0 +1,4 @@
+- Created an Avengers Registration form with params (name, age, and power)
+- Used thymeleaf, springweb, and lombok dependecies
+- Used @getmappings/post mappings, lists to store the "avenger" class as objects
+- Avengers class has data members involving info about the params
