@@ -1,0 +1,3 @@
+- Creating a springboot application
+- With spring web dependencies
+- Outputted a string say "Hello World created by Kevin"
