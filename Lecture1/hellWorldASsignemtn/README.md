@@ -1,3 +1,6 @@
 - Creating a springboot application
-- With spring web dependencies
-- Outputted a string say "Hello World created by Kevin"
+- With spring web & thymeleaf dependencies
+- Used @GetMapping to request get methods
+- Refactoed the endpoint of the get mapping method to reutrn a HTML page
+- Added a HTML page in the resource > template directory
+- Outputted a HTML page say "Hello World created by Kevin"
