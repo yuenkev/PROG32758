@@ -1,0 +1,2 @@
+- Worked on Logging && Lombok 
+- Lombok allows us to cut out reptitive coding w/getters and setters
