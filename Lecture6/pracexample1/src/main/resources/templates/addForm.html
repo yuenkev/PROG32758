@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+
+<p th:text="|Id: ${form.name}|"></p>
+<p th:text="|Message: ${form.message}|"></p>
+
+<a href="/addForm">Submit another message</A>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org" lang="en">
+<head >
+    <meta charset="UTF-8">
+    <title>Enter Hero Application</title>
+</head>
+<body>
+
+
+<h1> Enter your hero's information</h1>
+<br>
+
+<form action="#" th:action="@{/addAvenger}" method="post" th:object="${avenger}">
+
+    <p>Name: <input type="text" th:field="*{name}"> </p>
+
+    <p>Age: <input type="number" th:field="*{age}"> </p>
+
+    <p>Power Source:
+        <select th:field="*{powerSource}">
+            <option th:each="source : *{powerSources}"
+                    th:value="${source}" th:text="${source}"></option>
+        </select>
+    </p>
+    <p><input type="submit" value="Add!"></p>
+</form>
+
+</body>
+</html>

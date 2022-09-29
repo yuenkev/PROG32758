@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Avenger DataBase</title>
+</head>
+<body>
+
+<h1>Welcome to the Avengers Database</h1>
+<div th:if="${avengerList.empty}">
+    <h2>Add an Avenger to begin!</h2>
+</div>
+
+<div th:unless="${avengerList.empty}">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+           <!-- <th>Power Source</th>  -->
+        </tr>
+        <tr th:each="avenger : ${avengerList}">
+            <th th:text="${avenger.name}">Thor</th>
+            <th th:text="${avenger.age}">32</th>
+            <td><a href="#" th:href="|/editAvenger/${avenger.id}|">edit</a></td>
+            <td><a href="#" th:href="|/deleteAvenger/${avenger.id}|">delete</a></td>
+            <!--<th th:text="${avenger.powerSource}">Deity</th> -->
+        </tr>
+    </table>
+</div>
+
+
+<a href="/addPage">Add an Avenger</a>
+
+</body>
+</html>
