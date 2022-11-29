@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>Spring Framework</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div class="container">
+    <div>
+        <h1>Table with Spring Boot and Thymeleaf</h1>
+        <table>
+	        <tr th:each="message : ${messages}">
+			    <td th:text="${message.id}"></td>
+			    <td th:text="${message.title}"></td>
+			    <td th:text="${message.text}"></td>
+			</tr>
+        </table>
+
+        <a href="/">index page</a>
+    </div>
+</div>
+</body>
+</html>
