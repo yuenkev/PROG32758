@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<h1>Details</h1>
+
+  <table>
+    <tr>
+      <th>Count</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Program</th>
+      <th>Year</th>
+      <th>Options</th>
+    </tr>
+
+    <tr>
+      <th th:text="${student.id}"></th>
+      <th th:text="${student.fName}"></th>
+      <th th:text="${student.lName}"></th>
+      <th th:text="${student.program}"></th>
+      <th th:text="${student.sYear}"></th>
+      <th th:text="${student.opts}"></th>
+    </tr>
+
+  </table>
+
+
+
+
+<br>
+<a href="/listStudents">Go Back to Listings</a>
+<br>
+
+<hr>
+<h2>Sheridan </h2>
+
+
+</body>
+</html>

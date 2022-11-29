@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>List All</h1>
+
+<div th:if="${studentList.empty}">
+  <h2>No student data</h2>
+</div>
+
+<div th:unless="${studentList.empty}">
+  <table>
+    <tr>
+      <th>Count</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Options</th>
+    </tr>
+
+    <tr th:each="student : ${studentList}">
+      <th th:text="${student.id}"></th>
+      <th th:text="${student.fName}"></th>
+      <th th:text="${student.lName}"></th>
+      <td>
+        <a href="#" th:href="|/showDetails/${student.id}|">Details</a>|
+        <a href="#" th:href="|/editStudent/${student.id}|">Edit</a>|
+        <a href="#" th:href="|/deleteStudent/${student.id}|">Delete</a></td>
+    </tr>
+
+  </table>
+</div>
+
+
+
+<br>
+<a href="/">Index</a>
+<br>
+<a href="/addPage">Add Student</a>
+<br>
+<a href="/deleteAll">Delete All</a>
+
+<hr>
+<h2>Sheridan </h2>
+
+</body>
+</html>

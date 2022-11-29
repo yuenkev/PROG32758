@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Student</title>
+</head>
+<body>
+
+<h1>Add Student</h1>
+
+<form action="#" th:action="@{/updateStudent}" method="post" th:object="${student}">
+
+  <input type="hidden" th:field="*{id}">
+
+  <h2>Student Name</h2>
+  <p>First Name: </p>
+  <input type="text" th:field="*{fName}">
+  <p>Last Name: </p>
+  <input type="text" th:field="*{lName}">
+
+
+
+  <h2>Student Info</h2>
+  <p>Program</p>
+  <select th:field="*{program}">
+    <option th:each="program : *{programs}"
+            th:value="${program}" th:text="${program}"></option>
+  </select>
+
+
+  <p>Year</p>
+  <input type="radio" th:field="*{sYear}" value="1">
+  <label>1</label>
+  <input type="radio" th:field="*{sYear}" value="2">
+  <label>2</label>
+  <input type="radio" th:field="*{sYear}" value="3">
+  <label>3</label>
+
+  <p>Option</p>
+  <input type="checkbox" th:field="*{opts}" value="Co-op">
+  <label>Co-op</label>
+  <input type="checkbox" th:field="*{opts}" value="Internship">
+  <label>Internship</label>
+
+
+  <br>
+  <br>
+  <input type="submit" value="Update">
+<!--  <a href="/"><button>Reset</button></a>-->
+
+</form>
+
+<br>
+<a href="/">Index</a>
+<br>
+<a href="/listStudents">List Student</a>
+
+<br>
+<hr>
+<h2>Sheridan </h2>
+
+</body>
+</html>
