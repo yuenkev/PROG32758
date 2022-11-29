@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1 th:text="|Hi there ${session.message}|">Hi there</h1>
+
+    <form action="#" method="get" th:action="@{/startSession}">
+
+        <input type="submit" value="Come back here" th:formaction="@{/startSession}">
+        <br><br>
+        <input type="submit" value="Kill the session" th:formaction="@{/killSession}">
+
+
+    </form>
+
+</body>
+</html>

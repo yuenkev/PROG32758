@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div th:if="${#httpServletRequest.cookies}">
+    <h1 th:text="|Hi there ${#httpServletRequest.cookies[0].value}|">
+        Hi there
+    </h1>
+</div>
+
+<div th:unless="${#httpServletRequest.cookies}">
+    <h1>No Cookie</h1>
+</div>
+
+<form action="#" method="get" th:Action="@{/cookie}">
+    <input type="submit" value="Go to Server and Reload">
+</form>
+
+</body>
+</html>
