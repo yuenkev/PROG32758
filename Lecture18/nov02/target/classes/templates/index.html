@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Page</title>
+</head>
+<body>
+
+
+    <h1>Welcome to BOBS Database</h1>
+
+    <form action="#" th:action="@{/addUser}" method="post" th:object="${user}">
+        <label>User Name:</label>
+        <input type="text" th:field="*{name}" placeholder="Enter a Username">
+        <br><br>
+        <label>Email:</label>
+        <input type="text" th:field="*{email}" placeholder="Enter a Email">
+        <br><br>
+        <label>Address:</label>
+        <input type="text" th:field="*{address}" placeholder="Enter a Address">
+        <br><br>
+        <input type="submit">
+
+    </form>
+
+<br><br>
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+        </tr>
+        <tr th:each="user : ${userList}">
+            <th th:text="${user.id}"></th>
+            <th th:text="${user.name}"></th>
+            <th th:text="${user.email}"></th>
+            <th th:text="${user.address}"></th>
+        </tr>
+    </table>
+
+
+</body>
+</html>
